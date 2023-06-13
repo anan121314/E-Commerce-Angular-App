@@ -1,0 +1,29 @@
+# Dependency directories
+/node_modules
+/dist
+
+# Compiled output
+/dist/
+/*.js
+/*.js.map
+/*.css
+
+# Environment variables
+/src/environments/environment.ts
+/src/environments/environment.prod.ts
+
+# IDE and editor files
+/.idea
+/.vscode
+/.editorconfig
+
+# Log files
+/*.log
+
+# Build artifacts
+/*.tgz
+/*.tar.gz
+
+# Miscellaneous
+/.DS_Store
+/Thumbs.db

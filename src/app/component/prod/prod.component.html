@@ -1,0 +1,68 @@
+<table class="table" style="margin-left: 15px;border: 1px solid black;width: 98%;">
+    <tbody>
+      <tr>
+        <td style="width: 550px;height: 550px;"><img src="{{receivedData.image}}" alt="" style="height: 100%;width: 100%;"></td>
+        <td>
+            <h4>{{receivedData.title}}</h4>
+            <h6 style="margin-top: 20px;">{{receivedData.description}}</h6>
+            <h6 style="margin-top: 40px;margin-left: 300px;">Rating : {{receivedData.rating.rate}}</h6>
+            <h6 style="margin-bottom: 50px;margin-left: 300px;">{{receivedData.rating.count}} ratings</h6>
+            <h6 style="margin-bottom: 20px;margin-left: 300px;">Price : {{receivedData.price}}$</h6>
+            <button type="button" class="btn btn-danger" style="margin-left: 300px; margin-bottom: 40px;">Buy Now</button>
+            <div><span style="margin-left: 250px;"><button type="button" class="btn btn-success">+ Wishlist</button></span><span style="margin-left: 25px;"><button type="button" class="btn btn-warning">+ Cart</button></span></div>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="width: 80%;margin-left: 120px;">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+             
+        <table class="table" style="margin-left: 15px;width: 98%;background-color: rgb(139, 139, 110);">
+          <tbody>
+            <tr>
+              <td style="width: 250px;height: 250px;"><img src="{{receivedData.image}}" alt="" style="height: 100%;width: 100%;"></td>
+              <td>
+                  <h4>{{receivedData.title}}</h4>
+                  <h6 style="margin-top: 20px;">{{receivedData.description}}</h6>
+                  <h6 style="margin-top: 40px;margin-left: 300px;">Rating : {{receivedData.rating.rate}}</h6>
+                  <h6 style="margin-bottom: 20px;margin-left: 300px;">Price : {{receivedData.price}}$</h6>
+      
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <div class="carousel-item" *ngFor="let item of productList">
+        <table class="table" style="margin-left: 15px;width: 98%;background-color: rgb(139, 139, 110);">
+          <tbody>
+            <tr>
+              <td style="width: 250px;height: 250px;"><img src="{{item.image}}" style="height: 100%;width: 100%;"></td>
+              <td>
+                  <h4>{{item.title}}</h4>
+                  <h6 style="margin-top: 20px;">{{item.description}}</h6>
+                  <h6 style="margin-top: 40px;margin-left: 300px;">Rating : {{item.rating.rate}}</h6>
+                  <h6 style="margin-bottom: 20px;margin-left: 300px;">Price : {{item.price}}$</h6>
+                  
+      
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" style="background-color: black;"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" style="fill: black;background-color: black;"></span>
+      <span  class="visually-hidden">Next</span>
+    </button>
+  </div>
